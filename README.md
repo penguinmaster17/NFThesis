@@ -1,9 +1,5 @@
 # NFThesis, COS 495
- ## Week 1 TO DO by 3/30:
-1. Familiarize with smart contract APIs 
-2. Work with OIT to get CAS approval - Done
-3. Set up Heroku - Done
-4. Begin work on smart contract for NFT minting
+ ## Week 1 TO DO by 3/30: Done
 
 ## Week 2 TO DO by 4/6:
 1. Continue work on smart contract for NFT minting
