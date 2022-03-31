@@ -10,21 +10,3 @@
 5. Login page with CAS authentication
 6. Landing Page for Minting -- Image upload interface
 7. Landing Page for Minting -- Button to go to gallery page
-
-
-
-## Aliya
-| Date  | Task        | Done?    
-| :---  | :---------: | -----: 
-| 4/6   | Continue work on smart contract for NFT minting      | <ul><li>- [ ] </li></ul>
-| 4/6   | MetaMask integration                                 | <ul><li>- [ ] </li></ul>
-| 4/6   | Landing Page for Minting                             | <ul><li>- [ ] </li></ul>
-| 4/6   | Metamask login feature                               | <ul><li>- [ ] </li></ul>
-
-
-## Kasey
-| Date  | Task        | Done?    
-| :---  | :---------: | -----: 
-| 4/6   | Continue work on smart contract for NFT minting      | <ul><li>- [ ] </li></ul>
-| 4/6   | MetaMask integration                                 | <ul><li>- [ ] </li></ul>
-| 4/6   | Backend image upload feature with IPFS               | <ul><li>- [ ] </li></ul>
