@@ -1,6 +1,7 @@
 # NFThesis, COS 495
  ## Week 1 TO DO by 3/30: Done
 
+
 ## Week 2 TO DO by 4/6:
 1. Continue work on smart contract for NFT minting
 2. Metamask integration
@@ -11,3 +12,19 @@
 7. Landing Page for Minting -- Button to go to gallery page
 
 
+
+## Aliya
+| Date  | Task        | Done?    
+| :---  | :---------: | -----: 
+| 4/6   | Continue work on smart contract for NFT minting      | <ul><li>- [ ] </li></ul>
+| 4/6   | MetaMask integration                                 | <ul><li>- [ ] </li></ul>
+| 4/6   | Landing Page for Minting                             | <ul><li>- [ ] </li></ul>
+| 4/6   | Metamask login feature                               | <ul><li>- [ ] </li></ul>
+
+
+## Kasey
+| Date  | Task        | Done?    
+| :---  | :---------: | -----: 
+| 4/6   | Continue work on smart contract for NFT minting      | <ul><li>- [ ] </li></ul>
+| 4/6   | MetaMask integration                                 | <ul><li>- [ ] </li></ul>
+| 4/6   | Backend image upload feature with IPFS               | <ul><li>- [ ] </li></ul>
