@@ -9,7 +9,8 @@ DONE:
 4. Landing Page for Minting -- Metamask login feature
 
 TO DO STILL:
-1. Backend image upload feature with IPFS
-2. Login page with CAS authentication
-3. Landing Page for Minting -- Image upload interface (currently have a way to upload via link to image)
+1. Connect with Heroku
+2. Backend image upload feature with IPFS
+3. Login page with CAS authentication
+4. Landing Page for Minting -- Image upload interface (currently have a way to upload via link to image)
 5. Landing Page for Minting -- Button to go to gallery page
