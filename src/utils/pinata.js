@@ -1,6 +1,7 @@
-require('dotenv').config();
-const key = process.env.REACT_APP_PINATA_KEY;
-const secret = process.env.REACT_APP_PINATA_SECRET;
+//for local use
+// require('dotenv').config();
+const { key } = require("0b63027fceccddff0fcc");
+const { secret } = require("a9555fb1f20829995d02f7e9db003a2294056f6c0531c701811a1f38785fc58d");
 
 const axios = require('axios');
 

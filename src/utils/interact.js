@@ -2,7 +2,8 @@
 import {pinJSONToIPFS} from './pinata.js'
 
 // import alchemy key from .env file and set up alchemy web3 endpoint
-require('dotenv').config();
+  // for local use
+  //require('dotenv').config();
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 
 const web3 = createAlchemyWeb3("wss://eth-mainnet.ws.alchemyapi.io/ws/zxdt3_lFwbDxgc_FXngY5_Bw_78tmR15") 
