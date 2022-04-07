@@ -1,6 +1,9 @@
 # NFThesis, COS 495
  ## Week 1 TO DO by 3/30: Done
 
+## Local Deployment
+1. `npm install`
+2. `npm start`
 
 ## Week 2 TO DO by 4/6:
 DONE:
