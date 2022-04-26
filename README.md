@@ -5,15 +5,12 @@
 1. `npm install`
 2. `npm start`
 
-## Week 2 TO DO by 4/6:
-DONE:
-1. Continue work on smart contract for NFT minting
-3. Metamask integration 
-4. Landing Page for Minting -- Metamask login feature
+Check out the smart contract on [Etherscan](https://ropsten.etherscan.io/address/0x5dda91c9EF7AA5103C3F69f06cd46bfE1E2A77c6).
+View your NFTs [here](https://ropsten.etherscan.io/address/0x5dda91c9EF7AA5103C3F69f06cd46bfE1E2A77c6#readContract) by entering your `tokenId` (param #11).
 
-TO DO STILL:
-1. Connect with Heroku
-2. Backend image upload feature with IPFS
-3. Login page with CAS authentication
-4. Landing Page for Minting -- Image upload interface (currently have a way to upload via link to image)
-5. Landing Page for Minting -- Button to go to gallery page
+Resources Consulted:
+- Ethereum, [NFT MINTER TUTORIAL](https://ethereum.org/ms/developers/tutorials/nft-minter/)
+- Ethereum, [HOW TO WRITE & DEPLOY AN NFT](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
+- Morioh, [NFT Minter Tutorial For Beginners](https://morioh.com/p/5279daa4244f)
+- Alchemy, [How to Create an NFT Tutorial](https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft)
+- Alchemy, [NFT Minter Tutorial: How to Create a Full Stack DApp](https://docs.alchemy.com/alchemy/tutorials/nft-minter/~/settings/provider)
