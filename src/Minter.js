@@ -81,7 +81,7 @@ const Minter = (props) => {
       <br></br>
       <h1 id="title">NFThesis</h1>
       <p>
-        Simply add your asset's link, name, and description, then press "Mint."
+        TESTING TESTING Simply add your asset's link, name, and description, then press "Mint."
       </p>
       <form>
         <h2>Link to asset: </h2>
