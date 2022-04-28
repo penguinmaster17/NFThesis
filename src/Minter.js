@@ -6,6 +6,7 @@ import {
   mintNFT
 } from "./utils/interact.js";
 import LogoutButton from "./logout.js";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Minter = (props) => {
 
