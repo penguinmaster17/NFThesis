@@ -19,6 +19,7 @@ const Minter = (props) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [url, setURL] = useState("");
+  const [image, setImage] = useState("");
  
   useEffect(async () => { 
     const {address, status} = await getCurrentWalletConnected();
@@ -33,7 +34,7 @@ const Minter = (props) => {
   };
 
   const onMintPressed = async () => {
-    const { status } = await mintNFT(url, name, description);
+    const { status } = await mintNFT(url, name, description, image);
     setStatus(status);
 };
 
@@ -84,6 +85,12 @@ const Minter = (props) => {
         TESTING TESTING Simply add your asset's link, name, and description, then press "Mint."
       </p>
       <form>
+        <h2>Upload Image: </h2>
+        <input 
+          type="file"
+          accept="image/png, image/jpeg"
+          onChange={(event) => setImage(event.target.value)}
+        />
         <h2>Link to asset: </h2>
         <input
           type="text"
