@@ -10,7 +10,7 @@ function App() {
     return (
     <div style={{display: 'flex', justifyContent: 'center', height: '50vh', alignItems: 'center', alignContent: 'center'}}>
     <div style={{display: 'flex', justifyContent: 'center', width: '50%'}}>
-      <div>Loading ...</div>
+      <div><b>Loading ...</b></div>
     </div>
     </div>
     );
