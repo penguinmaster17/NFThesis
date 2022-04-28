@@ -7,7 +7,6 @@ import {
 } from "./utils/interact.js";
 import LogoutButton from "./logout.js";
 
-
 const Minter = (props) => {
 
   //State variables
@@ -16,12 +15,14 @@ const Minter = (props) => {
   // name = a string that stores the NFT's name
   // description = a string that stores the NFT's description
   // url = a string that is a link to the NFT's digital asset
+  // Auth0 components for personalisation of the page
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [url, setURL] = useState("");
   const [image, setImage] = useState("");
+  const { user, isAuthenticated, isLoading } = useAuth0();
  
   useEffect(async () => { 
     const {address, status} = await getCurrentWalletConnected();
@@ -85,8 +86,9 @@ const Minter = (props) => {
 
       <br></br>
       <h1 id="title">NFThesis</h1>
+      {!isLoading && <p>Welcome Back, {user.name}!</p>}
       <p>
-        TESTING TESTING Simply add your asset's link, name, and description, then press "Mint."
+        Simply add your asset's link, name, and description, then press "Mint."
       </p>
       <form>
         <h2>Upload Image: </h2>
