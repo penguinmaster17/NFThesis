@@ -5,7 +5,7 @@ import {
   getCurrentWalletConnected,
   mintNFT
 } from "./utils/interact.js";
-import LoginButton from "../login.js";
+import LoginButton from "./login.js";
 
 const Minter = (props) => {
 
