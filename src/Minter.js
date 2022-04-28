@@ -5,7 +5,7 @@ import {
   getCurrentWalletConnected,
   mintNFT
 } from "./utils/interact.js";
-import LoginButton from "./login.js";
+
 
 const Minter = (props) => {
 
@@ -79,7 +79,7 @@ const Minter = (props) => {
           <span>Connect Wallet</span>
         )}
       </button>
-      <LoginButton />
+      
 
       <br></br>
       <h1 id="title">NFThesis</h1>
