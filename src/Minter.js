@@ -1,5 +1,6 @@
 // adapted from https://docs.alchemy.com/alchemy/tutorials/nft-minter 
 import { useEffect, useState } from "react";
+
 import { 
   connectWallet,
   getCurrentWalletConnected,
@@ -7,6 +8,7 @@ import {
 } from "./utils/interact.js";
 import LogoutButton from "./logout.js";
 import { useAuth0 } from "@auth0/auth0-react";
+import { create } from 'ipfs-http-client'
 
 const Minter = (props) => {
 
@@ -24,6 +26,7 @@ const Minter = (props) => {
   const [url, setURL] = useState("");
   const [image, setImage] = useState("");
   const { user, isAuthenticated, isLoading } = useAuth0();
+  const client = create('https://ipfs.infura.io:5001/api/v0')
  
   useEffect(async () => { 
     const {address, status} = await getCurrentWalletConnected();
@@ -38,9 +41,23 @@ const Minter = (props) => {
   };
 
   const onMintPressed = async () => {
-    const { status } = await mintNFT(url, name, description, image);
+    console.log("url from onMintPressed", url);
+    const { status } = await mintNFT(url, name, description);
     setStatus(status);
-};
+  };
+
+  const onUploadPressed = async (event) => {
+    const file = event.target.files[0]
+    try {
+      const added = await client.add(file)
+      const uploadUrl = `https://ipfs.infura.io/ipfs/${added.path}`
+      console.log("uploadUrl", uploadUrl);
+      setURL(uploadUrl);
+    } catch (error) {
+      console.log('Error uploading file: ', error)
+    }
+  }
+
 
   function addWalletListener() {
     if (window.ethereum) {
@@ -96,13 +113,7 @@ const Minter = (props) => {
         <input 
           type="file"
           accept="image/png, image/jpeg"
-          onChange={(event) => setImage(event.target.value)}
-        />
-        <h2>Link to asset: </h2>
-        <input
-          type="text"
-          placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
-          onChange={(event) => setURL(event.target.value)}
+          onChange={(event) => onUploadPressed(event)}
         />
         <h2>Name: </h2>
         <input

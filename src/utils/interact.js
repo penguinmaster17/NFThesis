@@ -53,7 +53,7 @@ export const connectWallet = async () => {
   };
 
   // mints an NFT
-  export const mintNFT = async(url, name, description, image) => {
+  export const mintNFT = async(url, name, description) => {
 
     //error handling
     if (url.trim() == "" || (name.trim() == "" || description.trim() == "")) { 
@@ -69,7 +69,6 @@ export const connectWallet = async () => {
     const metadata = new Object();
     metadata.name = name;
     metadata.image = url;
-    metadata.fname = image;
     metadata.description = description;
 
     //pinata pin request
