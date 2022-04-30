@@ -1,6 +1,7 @@
 import './App.css';
 import Minter from './Minter';
 import LandingPage from './landingpage';
+import GalleryPage from './gallerypage';
 import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
@@ -24,12 +25,21 @@ function App() {
   );
   }
 
+  if(isGallery){
+    return (
+      <div className="App">
+        <GalleryPage></GalleryPage>
+      </div>
+    )
+  };
+
   return (
 
     <div className="App">
       <Minter></Minter>
     </div>
   );
+
 
 }
 

@@ -124,7 +124,7 @@ const Minter = (props) => {
         <h2>Description: </h2>
         <input
           type="text"
-          placeholder="e.g. Even cooler than cryptokitties ;)"
+          placeholder="e.g. My Senior Thesis Project!"
           onChange={(event) => setDescription(event.target.value)}
         />
       </form>
@@ -134,6 +134,7 @@ const Minter = (props) => {
       <p id="status">
         {status}
       </p>
+      <GalleryButton />
     </div>
   );
 };
