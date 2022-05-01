@@ -10,7 +10,7 @@ import {
 import LogoutButton from "./logout.js";
 import { useAuth0 } from "@auth0/auth0-react";
 import { create } from 'ipfs-http-client'
-import GalleryButton from "./gallery.js";
+import GalleryPage from "./gallerypage.js";
 
 const Minter = (props) => {
 
@@ -102,7 +102,7 @@ const Minter = (props) => {
         )}
       </button>
       <LogoutButton />
-      <GalleryButton />
+      {/* <GalleryButton /> */}
       
 
       <br></br>
@@ -137,7 +137,7 @@ const Minter = (props) => {
       <p id="status">
         {status}
       </p>
-      <GalleryButton />
+      <GalleryPage />
     </div>
   );
 };
