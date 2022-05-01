@@ -1,6 +1,7 @@
 // adapted from https://docs.alchemy.com/alchemy/tutorials/nft-minter 
 import { useEffect, useState } from "react";
 
+
 import { 
   connectWallet,
   getCurrentWalletConnected,
@@ -9,6 +10,7 @@ import {
 import LogoutButton from "./logout.js";
 import { useAuth0 } from "@auth0/auth0-react";
 import { create } from 'ipfs-http-client'
+import GalleryButton from "./gallery.js";
 
 const Minter = (props) => {
 
@@ -100,6 +102,7 @@ const Minter = (props) => {
         )}
       </button>
       <LogoutButton />
+      <GalleryButton />
       
 
       <br></br>
