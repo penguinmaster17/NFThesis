@@ -26,7 +26,7 @@ const GalleryPage = () => {
     };
 
     return (
-        <div className="Minter">
+        <div className="GalleryPage">
             <div style={{display: 'flex', flexDirection:'column', justifyContent: 'center', height: '50vh', alignItems: 'center', alignContent: 'center'}}>
                 <div style={{display: 'flex', justifyContent: 'center', width: '50%'}}>
                     <br></br>
@@ -34,7 +34,20 @@ const GalleryPage = () => {
                 </div>
                 <button id="galButton" onClick={galleryButtonPressed}></button>
                 <div style={{color: 'red', margin: '20px' }}>
-                    {JSON.stringify(myNFTs)}
+                    { Object.entries(myNFTs).map(([key, value]) => {
+                        let metadata = JSON.parse(value.metadata);
+                        return(
+                            <div>
+                                <img class={metadata.name}
+                                    src={metadata.image}
+                                    alt={metadata.description}
+                                    width="100vw"
+                                    height="100vw"
+                                    >
+                                </img>
+                            </div>
+                        );
+                    })}
                 </div>  
             </div>
         </div>
