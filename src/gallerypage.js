@@ -20,4 +20,4 @@ const GalleryPage = () => {
     );  
 }
 
-export default LandingPage;
+export default GalleryPage;
