@@ -1,14 +1,19 @@
 # NFThesis, COS 495
- ## Week 1 TO DO by 3/30: Done
+
+## Week 1 TO DO by 3/30: Done
 
 ## Local Deployment
+
 1. `npm install`
 2. `npm start`
+
+In order to view the gallery, you MUST be using chrome as your browser. Due to CORS, you cannot use Mozilla Firefox to view the minted NFTs.
 
 Check out the smart contract on [Etherscan](https://ropsten.etherscan.io/address/0x5dda91c9EF7AA5103C3F69f06cd46bfE1E2A77c6).
 View your NFTs [here](https://ropsten.etherscan.io/address/0x5dda91c9EF7AA5103C3F69f06cd46bfE1E2A77c6#readContract) by entering your `tokenId` (param #11).
 
 Resources Consulted:
+
 - Ethereum, [NFT MINTER TUTORIAL](https://ethereum.org/ms/developers/tutorials/nft-minter/)
 - Ethereum, [HOW TO WRITE & DEPLOY AN NFT](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
 - Dev, [Uploading Files to IPFS from a Web Application](https://dev.to/edge-and-node/uploading-files-to-ipfs-from-a-web-application-50a)
