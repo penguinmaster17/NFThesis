@@ -27,7 +27,7 @@ const GalleryPage = ({backButtonPressed}) => {
 
     return (
         <div className="GalleryPage">
-            <div style={{display: 'flex', flexDirection:'column', justifyContent: 'center', height: '50vh', alignItems: 'center', alignContent: 'center'}}>
+            <div style={{display: 'flex', flexDirection:'column', justifyContent: 'center', height: '60vh', alignItems: 'center', alignContent: 'center'}}>
                 <div style={{display: 'flex', justifyContent: 'center', width: '50%'}}>
                     <br></br>
                     <h1 id="title">Gallery</h1>

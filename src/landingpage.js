@@ -10,7 +10,8 @@ const LandingPage = () => {
     <LoginButton />
     <br />
     </div>
-    <div style={{color: 'red', margin: '20px' }}>You must log in with your Princeton email address! 🐯</div>  
+    <div style={{color: 'red', margin: '20px' }}>You must log in with your Princeton email address! 🐯</div> 
+    <div style={{color: 'red', margin: '20px' }}> Please use the most recent version of Chrome. </div>  
     </div>
         </div>
     );  

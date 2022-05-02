@@ -2,11 +2,12 @@
 import {pinJSONToIPFS} from './pinata.js'
 
 // import alchemy key from .env file and set up alchemy web3 endpoint
-  // for local use
+  // next line for local use only!!
   //require('dotenv').config();
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 
 const web3 = createAlchemyWeb3("wss://eth-mainnet.ws.alchemyapi.io/ws/zxdt3_lFwbDxgc_FXngY5_Bw_78tmR15") 
+// next two lines for local use only!!
 //const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 //const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 
@@ -16,7 +17,7 @@ const contractAddress = "0x5dda91c9EF7AA5103C3F69f06cd46bfE1E2A77c6";
 export const connectWallet = async () => {
     // check if window.ethereum is enabled in browser
     if (window.ethereum) {
-      // attempt to connect to metamask
+      // attempt metamask connect
         try {
         const addressArray = await window.ethereum.request({
           method: "eth_requestAccounts",
@@ -30,7 +31,7 @@ export const connectWallet = async () => {
       } catch (err) {
         return {
           address: "",
-          status: "😥 " + err.message,
+          status: err.message,
         };
       }
     } else {
@@ -76,7 +77,7 @@ export const connectWallet = async () => {
     if (!pinataResponse.success) {
         return {
             success: false,
-            status: "😢 Something went wrong while uploading your tokenURI.",
+            status: "Something went wrong while uploading your tokenURI.",
         }
     } 
     const tokenURI = pinataResponse.pinataUrl;  
@@ -100,12 +101,12 @@ export const connectWallet = async () => {
             });
         return {
             success: true,
-            status: "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash
+            status: "Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash
         }
     } catch (error) {
         return {
             success: false,
-            status: "😥 Something went wrong: " + error.message
+            status: "Something went wrong: " + error.message
         }
     }
 }
@@ -132,7 +133,7 @@ export const connectWallet = async () => {
       } catch (err) {
         return {
           address: "",
-          status: "😥 " + err.message,
+          status: err.message,
         };
       }
     } else {
