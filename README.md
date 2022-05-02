@@ -20,3 +20,4 @@ Resources Consulted:
 - Morioh, [NFT Minter Tutorial For Beginners](https://morioh.com/p/5279daa4244f)
 - Alchemy, [How to Create an NFT Tutorial](https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft)
 - Alchemy, [NFT Minter Tutorial: How to Create a Full Stack DApp](https://docs.alchemy.com/alchemy/tutorials/nft-minter/~/settings/provider)
+- Moralis, [NFT API](https://github.com/nft-api/nft-api)

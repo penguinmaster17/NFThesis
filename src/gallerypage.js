@@ -32,7 +32,7 @@ const GalleryPage = ({backButtonPressed}) => {
                     <br></br>
                     <h1 id="title">Gallery</h1>
                 </div>
-                <button id="galButton" style={{cursor: 'pointer'}} onClick={galleryButtonPressed}>Click Me!</button>
+                <button id="galButton" style={{cursor: 'pointer'}} onClick={galleryButtonPressed}>Let's see!</button>
                 <div style={{padding: '20px'}}><button id="galButton" style={{cursor: 'pointer'}} onClick={() => {backButtonPressed(false)}}>Go Back</button></div>
                 <div style={{color: 'red', margin: '20px', display: 'flex', flexDirection: 'row', justifyContent: 'center', border: '20px', margin: '20px'}}>
                     { Object.entries(myNFTs).map(([key, value]) => {

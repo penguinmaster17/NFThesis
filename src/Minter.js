@@ -133,7 +133,7 @@ const Minter = (props) => {
         <h2>Name: </h2>
         <input
           type="text"
-          placeholder="e.g. My first NFT!"
+          placeholder="e.g. My First NFT!"
           onChange={(event) => setName(event.target.value)}
         />
         <h2>Description: </h2>
