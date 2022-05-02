@@ -13,8 +13,8 @@ const masterKey = "3IezXrkFGiakYtYMzP97mw65xlX6oFawLhIJqmYz";
 
 const options = { chain: 'ropsten', address: '0x5dda91c9EF7AA5103C3F69f06cd46bfE1E2A77c6' };
 
-  
-const GalleryPage = () => {
+
+const GalleryPage = ({backButtonPressed}) => {
 
     const [myNFTs, setMyNFTs] = useState("");
 
@@ -32,7 +32,8 @@ const GalleryPage = () => {
                     <br></br>
                     <h1 id="title">Gallery</h1>
                 </div>
-                <button id="galButton" onClick={galleryButtonPressed}></button>
+                <button id="galButton" style={{cursor: 'pointer'}} onClick={galleryButtonPressed}>Click Me!</button>
+                <div style={{padding: '20px'}}><button id="galButton" style={{cursor: 'pointer'}} onClick={() => {backButtonPressed(false)}}>Go Back</button></div>
                 <div style={{color: 'red', margin: '20px' }}>
                     { Object.entries(myNFTs).map(([key, value]) => {
                         let metadata = JSON.parse(value.metadata);

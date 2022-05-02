@@ -12,6 +12,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { create } from 'ipfs-http-client'
 import GalleryPage from "./gallerypage.js";
 
+
 const Minter = (props) => {
 
   //State variables
@@ -22,13 +23,16 @@ const Minter = (props) => {
   // url = a string that is a link to the NFT's digital asset
   // Auth0 components for personalisation of the page
   const [walletAddress, setWallet] = useState("");
+  const [onGallery, setOnGallery] = useState(false);
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [url, setURL] = useState("");
   const [image, setImage] = useState("");
+  
   const { user, isAuthenticated, isLoading } = useAuth0();
   const client = create('https://ipfs.infura.io:5001/api/v0')
+  
  
   useEffect(async () => { 
     const {address, status} = await getCurrentWalletConnected();
@@ -60,6 +64,13 @@ const Minter = (props) => {
     }
   }
 
+  const galleryButtonPressed = (e) => {
+    setOnGallery(true);
+  }
+
+  const backButtonPressed = (e) => {
+    setOnGallery(e);
+  }
 
   function addWalletListener() {
     if (window.ethereum) {
@@ -90,6 +101,8 @@ const Minter = (props) => {
   
 
   return (
+    <>
+    {!onGallery &&
     <div className="Minter">
       <button id="walletButton" onClick={connectWalletPressed}>
         {walletAddress.length > 0 ? (
@@ -102,7 +115,6 @@ const Minter = (props) => {
         )}
       </button>
       <LogoutButton />
-      {/* <GalleryButton /> */}
       
 
       <br></br>
@@ -137,8 +149,12 @@ const Minter = (props) => {
       <p id="status">
         {status}
       </p>
-      <GalleryPage />
-    </div>
+      <div style={{display: 'flex', justifyContent: 'center', padding: '20px'}}><button id="walletButton" onClick={galleryButtonPressed}>
+      <span>Click Here to View NFThesis Gallery</span>
+      </button></div>
+    </div> }
+    {onGallery && <GalleryPage backButtonPressed={backButtonPressed} />}
+    </>
   );
 };
 
