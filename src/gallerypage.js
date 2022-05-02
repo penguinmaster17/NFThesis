@@ -34,16 +34,16 @@ const GalleryPage = ({backButtonPressed}) => {
                 </div>
                 <button id="galButton" style={{cursor: 'pointer'}} onClick={galleryButtonPressed}>Click Me!</button>
                 <div style={{padding: '20px'}}><button id="galButton" style={{cursor: 'pointer'}} onClick={() => {backButtonPressed(false)}}>Go Back</button></div>
-                <div style={{color: 'red', margin: '20px' }}>
+                <div style={{color: 'red', margin: '20px', display: 'flex', flexDirection: 'row', justifyContent: 'center', border: '20px', margin: '20px'}}>
                     { Object.entries(myNFTs).map(([key, value]) => {
                         let metadata = JSON.parse(value.metadata);
                         return(
-                            <div>
+                            <div style={{margin: '5px'}}>
                                 <img class={metadata.name}
                                     src={metadata.image}
                                     alt={metadata.description}
-                                    width="100vw"
-                                    height="100vw"
+                                    width="auto"
+                                    height="200vh"
                                     >
                                 </img>
                             </div>
