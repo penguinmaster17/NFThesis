@@ -1,13 +1,11 @@
 # NFThesis, COS 495
 
-## Week 1 TO DO by 3/30: Done
-
 ## Local Deployment
 
 1. `npm install`
 2. `npm start`
 
-In order to view the gallery, you MUST be using chrome as your browser. Due to CORS, you cannot use Mozilla Firefox to view the minted NFTs.
+In order to view the gallery component, you MUST be using chrome as your browser. Due to CORS, you cannot use Mozilla Firefox to view the minted NFTs.
 
 Check out the smart contract on [Etherscan](https://ropsten.etherscan.io/address/0x5dda91c9EF7AA5103C3F69f06cd46bfE1E2A77c6).
 View your NFTs [here](https://ropsten.etherscan.io/address/0x5dda91c9EF7AA5103C3F69f06cd46bfE1E2A77c6#readContract) by entering your `tokenId` (param #11).
