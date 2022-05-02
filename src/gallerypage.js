@@ -27,25 +27,29 @@ const GalleryPage = ({backButtonPressed}) => {
 
     return (
         <div className="GalleryPage">
-            <div style={{display: 'flex', flexDirection:'column', justifyContent: 'center', height: '60vh', alignItems: 'center', alignContent: 'center'}}>
+            <div style={{display: 'flex', flexDirection:'column', justifyContent: 'center', height: '100vh', alignItems: 'center', alignContent: 'center'}}>
                 <div style={{display: 'flex', justifyContent: 'center', width: '50%'}}>
                     <br></br>
                     <h1 id="title">Gallery</h1>
                 </div>
                 <button id="galButton" style={{cursor: 'pointer'}} onClick={galleryButtonPressed}>Let's see!</button>
                 <div style={{padding: '20px'}}><button id="galButton" style={{cursor: 'pointer'}} onClick={() => {backButtonPressed(false)}}>Go Back</button></div>
-                <div style={{color: 'red', margin: '20px', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', border: '20px'}}>
+                <div style={{color: 'red', margin: '20px', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', border: '20px', overflow: 'auto'}}>
                     { Object.entries(myNFTs).map(([key, value]) => {
                         let metadata = JSON.parse(value.metadata);
                         return(
                             <div style={{margin: '5px'}}>
-                                <img class={metadata.name}
-                                    src={metadata.image}
-                                    alt={metadata.description}
-                                    width="auto"
-                                    height="200vh"
-                                    >
-                                </img>
+                                <figure>
+                                    <img style={{borderRadius: "8px"}}
+                                        class={metadata.name}
+                                        src={metadata.image}
+                                        alt={metadata.description}
+                                        width="auto"
+                                        height="200vh"
+                                        >
+                                    </img>
+                                    <figcaption>{metadata.name}</figcaption>
+                                </figure>
                             </div>
                         );
                     })}
